@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>NachmanFlute • הצטרפו למסע | Join the Journey</title>
+  <title>היי חברים ומשפחה ❤️ פתחתי עמוד חליל חדש | NachmanFlute</title>
+  <meta property="og:title" content="היי חברים ומשפחה ❤️ פתחתי עמוד חליל חדש | NachmanFlute" />
+  <meta property="og:description" content="כל יום סרטון קצר של אלתור חי בחליל מהלב. לחצו על כל ריבוע בתמונה כדי לעקוב!" />
+  <meta property="og:image" content="https://nachmantzuf.github.io/flute/NachmanFlute_Invite_Hebrew.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://nachmantzuf.github.io/flute/NachmanFlute_Invite_Hebrew.jpg" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
@@ -15,7 +21,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 12px;
+      padding: 10px;
     }
     .lang-bar {
       display: flex;
@@ -59,7 +65,6 @@
       user-select: none;
       -webkit-user-drag: none;
     }
-    /* Clickable transparent hotspot rectangles positioned over the 4 buttons on the image */
     .hotspot {
       position: absolute;
       border-radius: 14px;
@@ -69,11 +74,10 @@
       text-decoration: none;
     }
     .hotspot:hover, .hotspot:active {
-      background: rgba(248, 206, 138, 0.16);
-      box-shadow: 0 0 0 2px rgba(248, 206, 138, 0.85);
+      background: rgba(248, 206, 138, 0.18);
+      box-shadow: 0 0 0 2px rgba(248, 206, 138, 0.9);
       transform: scale(1.015);
     }
-    /* Exact button coordinates (1080x1920 canvas) */
     .row-0 { top: 80.21%; height: 6.46%; }
     .row-1 { top: 87.81%; height: 6.46%; }
     .col-left { left: 7.78%; width: 41.11%; }
@@ -83,23 +87,19 @@
 <body>
   <div class="lang-bar">
     <button class="lang-btn active" id="btn-he" onclick="setLang('he')">עברית</button>
-    <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+    <button class="lang-btn " id="btn-en" onclick="setLang('en')">English</button>
   </div>
 
-  <!-- Hebrew Interactive Image -->
-  <div class="card-wrap" id="card-he">
+  <div class="card-wrap" id="card-he" style="display: block;">
     <img src="NachmanFlute_Invite_Hebrew.jpg" alt="NachmanFlute Hebrew Invite" />
-    <!-- RTL layout: Top-Right is YouTube, Top-Left is Instagram, Bottom-Right is Facebook, Bottom-Left is X -->
     <a class="hotspot row-0 col-right" href="https://www.youtube.com/@NachmanFlute" target="_blank" rel="noopener" aria-label="YouTube"></a>
     <a class="hotspot row-0 col-left" href="https://instagram.com/nachmanflute" target="_blank" rel="noopener" aria-label="Instagram"></a>
     <a class="hotspot row-1 col-right" href="https://facebook.com/1470555269463577" target="_blank" rel="noopener" aria-label="Facebook"></a>
     <a class="hotspot row-1 col-left" href="https://x.com/NachmanTz" target="_blank" rel="noopener" aria-label="X Twitter"></a>
   </div>
 
-  <!-- English Interactive Image -->
   <div class="card-wrap" id="card-en" style="display: none;">
     <img src="NachmanFlute_Invite_English.jpg" alt="NachmanFlute English Invite" />
-    <!-- LTR layout: Top-Left is YouTube, Top-Right is Instagram, Bottom-Left is Facebook, Bottom-Right is X -->
     <a class="hotspot row-0 col-left" href="https://www.youtube.com/@NachmanFlute" target="_blank" rel="noopener" aria-label="YouTube"></a>
     <a class="hotspot row-0 col-right" href="https://instagram.com/nachmanflute" target="_blank" rel="noopener" aria-label="Instagram"></a>
     <a class="hotspot row-1 col-left" href="https://facebook.com/1470555269463577" target="_blank" rel="noopener" aria-label="Facebook"></a>
