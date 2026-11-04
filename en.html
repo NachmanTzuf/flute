@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Hey friends & family ❤️ New Flute Page | NachmanFlute</title>
+  <meta property="og:title" content="Hey friends & family ❤️ New Flute Page | NachmanFlute" />
+  <meta property="og:description" content="Daily short flute improvisations from the heart. Tap any button on the photo to follow!" />
+  <meta property="og:image" content="https://nachmantzuf.github.io/flute/NachmanFlute_Invite_English.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://nachmantzuf.github.io/flute/NachmanFlute_Invite_English.jpg" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      background: #06080e;
+      color: #fffaf2;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+    .lang-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid rgba(248, 206, 138, 0.35);
+    }
+    .lang-btn {
+      background: transparent;
+      color: #f8ce8a;
+      border: none;
+      padding: 6px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .lang-btn.active {
+      background: #f8ce8a;
+      color: #0b0e17;
+    }
+    .card-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 1080 / 1920;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75);
+      border: 1px solid rgba(248, 206, 138, 0.28);
+    }
+    .card-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .hotspot {
+      position: absolute;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+      display: block;
+      text-decoration: none;
+    }
+    .hotspot:hover, .hotspot:active {
+      background: rgba(248, 206, 138, 0.18);
+      box-shadow: 0 0 0 2px rgba(248, 206, 138, 0.9);
+      transform: scale(1.015);
+    }
+    .row-0 { top: 80.21%; height: 6.46%; }
+    .row-1 { top: 87.81%; height: 6.46%; }
+    .col-left { left: 7.78%; width: 41.11%; }
+    .col-right { left: 51.11%; width: 41.11%; }
+  </style>
+</head>
+<body>
+  <div class="lang-bar">
+    <button class="lang-btn " id="btn-he" onclick="setLang('he')">עברית</button>
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+
+  <div class="card-wrap" id="card-he" style="display: none;">
+    <img src="NachmanFlute_Invite_Hebrew.jpg" alt="NachmanFlute Hebrew Invite" />
+    <a class="hotspot row-0 col-right" href="https://www.youtube.com/@NachmanFlute" target="_blank" rel="noopener" aria-label="YouTube"></a>
+    <a class="hotspot row-0 col-left" href="https://instagram.com/nachmanflute" target="_blank" rel="noopener" aria-label="Instagram"></a>
+    <a class="hotspot row-1 col-right" href="https://facebook.com/1470555269463577" target="_blank" rel="noopener" aria-label="Facebook"></a>
+    <a class="hotspot row-1 col-left" href="https://x.com/NachmanTz" target="_blank" rel="noopener" aria-label="X Twitter"></a>
+  </div>
+
+  <div class="card-wrap" id="card-en" style="display: block;">
+    <img src="NachmanFlute_Invite_English.jpg" alt="NachmanFlute English Invite" />
+    <a class="hotspot row-0 col-left" href="https://www.youtube.com/@NachmanFlute" target="_blank" rel="noopener" aria-label="YouTube"></a>
+    <a class="hotspot row-0 col-right" href="https://instagram.com/nachmanflute" target="_blank" rel="noopener" aria-label="Instagram"></a>
+    <a class="hotspot row-1 col-left" href="https://facebook.com/1470555269463577" target="_blank" rel="noopener" aria-label="Facebook"></a>
+    <a class="hotspot row-1 col-right" href="https://x.com/NachmanTz" target="_blank" rel="noopener" aria-label="X Twitter"></a>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('card-he').style.display = lang === 'he' ? 'block' : 'none';
+      document.getElementById('card-en').style.display = lang === 'en' ? 'block' : 'none';
+      document.getElementById('btn-he').classList.toggle('active', lang === 'he');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    }
+  </script>
+</body>
+</html>
